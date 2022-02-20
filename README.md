@@ -23,6 +23,6 @@ Here paging source class process pulling data with specific config for paging li
 LOADSIZE*3 items during the first load .
  - @LoadResult as return type. 
  - @getRefreshKey abstract method for subsequent refresh calls to @PagingSource.load().
-Take a look at code itself
-
-<script src="https://gist.github.com/pranimation/0c29c7ed5ef3e3067e6741487b0a705a.js"></script>
+ 
+Take a look at code itself.
+https://gist.github.com/pranimation/0c29c7ed5ef3e3067e6741487b0a705a
