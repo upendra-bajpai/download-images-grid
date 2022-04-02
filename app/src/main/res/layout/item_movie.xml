@@ -7,11 +7,11 @@
 
         <variable
             name="userItemUiState"
-            type="com.cedcos.omdb.ui.MovieItemUiState" />
+            type="com.cedcos.omdb.data.model.ImageModel" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         app:cardCornerRadius="4dp"
@@ -19,12 +19,12 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ivPhoto"
-                imageUrl="@{userItemUiState.imageUrl}"
+                imageUrl="@{userItemUiState.poster}"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:layout_gravity="center_horizontal"
@@ -37,40 +37,6 @@
                 app:layout_constraintStart_toStartOf="@+id/glStart"
                 app:layout_constraintTop_toTopOf="@+id/glTop"
                 app:srcCompat="@drawable/ic_launcher_background" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvName"
-                style="@style/user_card_text_style"
-                android:text="@{userItemUiState.name}"
-                app:layout_constraintBottom_toTopOf="@+id/tvMId"
-                app:layout_constraintEnd_toEndOf="@id/glEnd"
-                app:layout_constraintStart_toEndOf="@id/ivPhoto"
-                app:layout_constraintTop_toTopOf="@+id/ivPhoto"
-                android:layout_margin="8dp"
-                android:textStyle="bold"
-                tools:text="Jhon Doe" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvMId"
-                style="@style/user_card_text_style"
-                android:text="@{userItemUiState.imdbId}"
-                app:layout_constraintBottom_toTopOf="@+id/tvYear"
-                app:layout_constraintEnd_toEndOf="@id/glEnd"
-                app:layout_constraintStart_toEndOf="@id/ivPhoto"
-                app:layout_constraintTop_toBottomOf="@+id/tvName"
-                android:layout_margin="8dp"
-                tools:text="Imdb Id" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvYear"
-                style="@style/user_card_text_style"
-                android:text="@{userItemUiState.year}"
-                app:layout_constraintBottom_toBottomOf="@+id/ivPhoto"
-                app:layout_constraintEnd_toEndOf="@id/glEnd"
-                app:layout_constraintStart_toEndOf="@id/ivPhoto"
-                app:layout_constraintTop_toBottomOf="@+id/tvMId"
-                android:layout_margin="8dp"
-                tools:text="2000" />
 
 
             <androidx.constraintlayout.widget.Guideline

@@ -18,13 +18,20 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name="com.cedcos.omdb.ui.MovieActivity"
+            android:name="com.cedcos.omdb.ui.SequenceActivity"
+            android:screenOrientation="sensorLandscape"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.cedcos.omdb.ui.ParallelActivity"
+            android:screenOrientation="sensorLandscape"
+            android:exported="true">
         </activity>
     </application>
 

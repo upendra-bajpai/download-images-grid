@@ -1,7 +1,6 @@
 package com.cedcos.omdb.common
 
 import android.content.Context
-import android.util.Log
 import androidx.paging.LoadState
 import com.cedcos.omdb.R
 

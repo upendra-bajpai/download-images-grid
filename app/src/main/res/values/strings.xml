@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Omdb by Upendra</string>
     <string name="user_list">Movie List - Upendra\'s  Machine Test </string>
-    <string name="retry">Retry</string>
+    <string name="retry">Go to other activity</string>
     <string name="something_went_wrong">Something went wrong.</string>
+    <string name="parallel">Parallel Loading</string>
+    <string name="series">Sequential Download</string>
 </resources>

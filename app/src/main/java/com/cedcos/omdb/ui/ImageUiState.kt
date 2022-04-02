@@ -8,7 +8,7 @@ import com.cedcos.omdb.common.BaseUiState
 /**
  * Created by Upendra on 19/2/2022.
  */
-data class MoviesUiState(
+data class ImageUiState(
     private val loadState: LoadState
 ) : BaseUiState() {
 
