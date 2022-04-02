@@ -2,7 +2,7 @@ package com.cedcos.omdb.di
 
 import android.content.Context
 import com.cedcos.omdb.BuildConfig
-import com.cedcos.omdb.network.MovieService
+import com.cedcos.omdb.network.ImageService
 import com.cedcos.omdb.util.NetworkConnectionInterceptor
 import dagger.Module
 import dagger.Provides
@@ -58,8 +58,8 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideUserService(retrofit: Retrofit): MovieService {
-        return retrofit.create(MovieService::class.java)
+    fun provideUserService(retrofit: Retrofit): ImageService {
+        return retrofit.create(ImageService::class.java)
     }
 
 }

@@ -6,15 +6,15 @@
     <data>
 
         <variable
-            name="moviessUiState"
-            type="com.cedcos.omdb.ui.MoviesUiState" />
+            name="imageUiState"
+            type="com.cedcos.omdb.ui.ImageUiState" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MovieActivity">
+        tools:context=".ui.SequenceActivity">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppbar"
@@ -27,10 +27,10 @@
             app:title="@string/user_list" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMovies"
+            android:id="@+id/rvImages"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility="@{moviessUiState.listVisibility}"
+            android:visibility="@{imageUiState.listVisibility}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="@{moviessUiState.progressBarVisibility}"
+            android:visibility="@{imageUiState.progressBarVisibility}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,19 +56,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/retry"
-            android:visibility="@{moviessUiState.errorVisibility}"
+            android:visibility="@{imageUiState.errorVisibility}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/topAppbar" />
+            app:layout_constraintTop_toBottomOf="@id/topAppbar"
+            app:layout_constraintVertical_bias="0.974" />
 
         <TextView
             android:id="@+id/tvError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@{moviessUiState.getErrorMessage(context)}"
-            android:visibility="@{moviessUiState.errorVisibility}"
+            android:text="@{imageUiState.getErrorMessage(context)}"
+            android:visibility="@{imageUiState.errorVisibility}"
             app:layout_constraintEnd_toEndOf="@+id/btnRetry"
             app:layout_constraintStart_toStartOf="@+id/btnRetry"
             app:layout_constraintTop_toBottomOf="@+id/btnRetry"

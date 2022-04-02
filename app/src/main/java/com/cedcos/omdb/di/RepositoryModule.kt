@@ -1,7 +1,7 @@
 package com.cedcos.omdb.di
 
-import com.cedcos.omdb.data.repository.MovieRepository
-import com.cedcos.omdb.data.repository.MovieRepositoryImpl
+import com.cedcos.omdb.data.repository.ImageRepository
+import com.cedcos.omdb.data.repository.ImageRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -16,5 +16,5 @@ import dagger.hilt.components.SingletonComponent
 abstract class RepositoryModule {
 
     @Binds
-    abstract fun provideUserRepository(userRepository: MovieRepositoryImpl): MovieRepository
+    abstract fun provideUserRepository(userRepository: ImageRepositoryImpl): ImageRepository
 }
