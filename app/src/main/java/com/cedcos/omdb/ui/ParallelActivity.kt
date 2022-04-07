@@ -61,6 +61,7 @@ class ParallelActivity : AppCompatActivity() {
             )
         )
         binding.rvImages.adapter = imageAdapter
+        binding.rvImages.setHasFixedSize(true)
     }
 
     private fun setObserver() {

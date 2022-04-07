@@ -2,8 +2,10 @@ package com.cedcos.omdb.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil.findBinding
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.cedcos.omdb.R
 import com.cedcos.omdb.data.model.ImageModel
 import com.cedcos.omdb.databinding.ItemMovieBinding
@@ -37,4 +39,10 @@ class ImageAdapter (private val users: ArrayList<ImageModel>) :
         users.addAll(list)
     }
 
+    override fun onViewRecycled(holder: ImageViewHolder) {
+        super.onViewRecycled(holder)
+
+        //clear image when image has been out of vision, this might flicker on scroll up
+        holder.clearImage()
+    }
 }

@@ -1,6 +1,7 @@
 package com.cedcos.omdb.ui
 
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.cedcos.omdb.data.model.ImageModel
 import com.cedcos.omdb.databinding.ItemMovieBinding
 import com.cedcos.omdb.util.ext.executeWithAction
@@ -14,4 +15,9 @@ class ImageViewHolder(private val binding: ItemMovieBinding) : RecyclerView.View
             this.userItemUiState = userItemUiState
         }
     }
+
+    fun clearImage(){
+        Glide.with(binding.ivPhoto).clear(binding.ivPhoto)
+    }
+
 }

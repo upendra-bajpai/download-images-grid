@@ -67,6 +67,9 @@ class SequenceActivity : AppCompatActivity() {
             )
         )
         binding.rvImages.adapter = imageAdapter
+
+        //Since every item here has fixed.
+        binding.rvImages.setHasFixedSize(true)
     }
 
     private fun setObserver() {
