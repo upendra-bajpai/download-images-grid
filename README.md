@@ -47,7 +47,7 @@ Results:
 |            | Before | After |
 |------------|--------|-------|
 | sequential | 64 mb  | 49 mb |
-| parallel   | 84 mb  | 64 mb |
+| parallel   | 84 mb  | 61 mb |
 
 sequential image:
 <p float="left">
@@ -59,5 +59,5 @@ sequential image:
 parallel image:
 <p float="left">
   <img src="https://i.postimg.cc/zvPJM68x/parall-before.png" width="500"  />
-  <img src="https://i.postimg.cc/qq7J14Vt/parall-after.png" width="500" />
+  <img src="https://i.postimg.cc/63tn52RD/Screenshot-from-2022-04-08-12-14-11.png" width="500" />
 </p>
