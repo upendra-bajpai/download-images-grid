@@ -36,8 +36,28 @@ For parallel downloading of images we can use async/await coroutine which will b
 
 ##For optimization of code
 
-approach
+approach:
+0. resize image to set exactly in image view by ```override``` in glide.
 We have images to load , which are the main cause of memory consumption, we need to optimize bitmap of images.
 1. clear recycler view holder on <i>onViewRecycled()</i>. This helps in deep activity stack where activities are not destroyed after navigation glide will hold objects.
 2. use **RGB_565**  instead of **ARGB_8888** in glide to load images(has visual impact).
 3. fix height of viewholder if view holder has fixed size. we used ``` binding.rvImages.setHasFixedSize(true)```, since we had view holder with fix height.
+
+Results:
+|            | Before | After |
+|------------|--------|-------|
+| sequential | 64 mb  | 49 mb |
+| parallel   | 84 mb  | 64 mb |
+
+sequential image:
+<p float="left">
+  <img src="https://i.postimg.cc/cCWYCKnp/se-befiore.png" width="100"  />
+  <img src="https://i.postimg.cc/PxYYdbPb/se-after.png" width="100" />
+</p>
+
+
+parallel image:
+<p float="left">
+  <img src="https://i.postimg.cc/zvPJM68x/parall-before.png" width="100"  />
+  <img src="https://i.postimg.cc/qq7J14Vt/parall-after.png" width="100" />
+</p>

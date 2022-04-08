@@ -17,6 +17,7 @@ fun ImageView.loadImage(url: String?) {
     Glide.with(this).load(url)
         .apply(
             RequestOptions()
+                .override(96,96)
                 .format(DecodeFormat.PREFER_RGB_565)//will take only 2 byte per pixel,half of the ARGB
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .skipMemoryCache(true)
