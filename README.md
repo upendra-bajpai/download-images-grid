@@ -51,13 +51,13 @@ Results:
 
 sequential image:
 <p float="left">
-  <img src="https://i.postimg.cc/cCWYCKnp/se-befiore.png" width="100"  />
-  <img src="https://i.postimg.cc/PxYYdbPb/se-after.png" width="100" />
+  <img src="https://i.postimg.cc/cCWYCKnp/se-befiore.png" width="500"  />
+  <img src="https://i.postimg.cc/PxYYdbPb/se-after.png" width="500" />
 </p>
 
 
 parallel image:
 <p float="left">
-  <img src="https://i.postimg.cc/zvPJM68x/parall-before.png" width="100"  />
-  <img src="https://i.postimg.cc/qq7J14Vt/parall-after.png" width="100" />
+  <img src="https://i.postimg.cc/zvPJM68x/parall-before.png" width="500"  />
+  <img src="https://i.postimg.cc/qq7J14Vt/parall-after.png" width="500" />
 </p>
