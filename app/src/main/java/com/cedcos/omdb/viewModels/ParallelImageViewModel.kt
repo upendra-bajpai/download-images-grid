@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.cedcos.omdb.data.model.ImageModel
+import com.cedcos.omdb.data.model.ResponseModel
 import com.cedcos.omdb.data.repository.ImageRepository
 import com.cedcos.omdb.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,7 +17,7 @@ import javax.inject.Inject
 class ParallelImageViewModel @Inject constructor(userRepository: ImageRepository) : ViewModel() {
 
 
-    private val users = MutableLiveData<Resource<List<ImageModel>>>()
+    private val users = MutableLiveData<Resource<List<ResponseModel>>>()
 
     init {
         fetchUsers(userRepository)
@@ -38,7 +38,7 @@ class ParallelImageViewModel @Inject constructor(userRepository: ImageRepository
 
 
 
-                val allUsersFromApi = mutableListOf<ImageModel>()
+                val allUsersFromApi = mutableListOf<ResponseModel>()
                 allUsersFromApi.addAll(usersFromApi)
                 allUsersFromApi.addAll(moreUsersFromApi)
                 allUsersFromApi.addAll(moreUsersFromApis)
@@ -49,7 +49,7 @@ class ParallelImageViewModel @Inject constructor(userRepository: ImageRepository
         }
     }
 
-    fun getMovieImages(): LiveData<Resource<List<ImageModel>>> {
+    fun getMovieImages(): LiveData<Resource<List<ResponseModel>>> {
         return users
     }
 }

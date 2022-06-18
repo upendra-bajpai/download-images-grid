@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cedcos.omdb.R
-import com.cedcos.omdb.data.model.ImageModel
+import com.cedcos.omdb.data.model.ResponseModel
 import com.cedcos.omdb.databinding.ActivityMovieBinding
 import com.cedcos.omdb.util.Status
 import com.cedcos.omdb.viewModels.ParallelImageViewModel
@@ -50,8 +50,10 @@ class ParallelActivity : AppCompatActivity() {
     private fun setListener() {
         // binding.btnRetry.setOnClickListener { imageAdapter.retry() }
         binding.topAppbar.setTitle(getString(R.string.parallel))
-        binding.btnRetry.setOnClickListener{startActivity(Intent(this,SequenceActivity::class.java))
-        finish()}
+        binding.btnRetry.setOnClickListener{
+            startActivity(Intent(this,SequenceActivity::class.java))
+            finish()
+        }
         binding.rvImages.layoutManager = GridLayoutManager(this, 10)
         imageAdapter = ImageAdapter(arrayListOf())
         binding.rvImages.addItemDecoration(
@@ -85,7 +87,7 @@ class ParallelActivity : AppCompatActivity() {
         }
     }
 
-    private fun renderList(users: List<ImageModel>) {
+    private fun renderList(users: List<ResponseModel>) {
         imageAdapter.addData(users)
         imageAdapter.notifyDataSetChanged()
     }

@@ -2,18 +2,16 @@ package com.cedcos.omdb.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil.findBinding
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.cedcos.omdb.R
-import com.cedcos.omdb.data.model.ImageModel
+import com.cedcos.omdb.data.model.ResponseModel
 import com.cedcos.omdb.databinding.ItemMovieBinding
 
 /**
  * Created by Upendra on 19/2/2022.
  */
-class ImageAdapter (private val users: ArrayList<ImageModel>) :
+class ImageAdapter (private val users: ArrayList<ResponseModel>) :
     RecyclerView.Adapter< ImageViewHolder>() {
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
@@ -35,7 +33,7 @@ class ImageAdapter (private val users: ArrayList<ImageModel>) :
        return users.size
     }
 
-    fun addData(list: List<ImageModel>) {
+    fun addData(list: List<ResponseModel>) {
         users.addAll(list)
     }
 

@@ -1,6 +1,6 @@
 package com.cedcos.omdb.data.repository
 
-import com.cedcos.omdb.data.model.ImageModel
+import com.cedcos.omdb.data.model.ResponseModel
 import com.cedcos.omdb.network.ImageService
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -16,7 +16,7 @@ class ImageRepositoryImpl @Inject constructor(
     private val userService: ImageService
 ) : ImageRepository {
 
-    override suspend fun getImages(page: Int): List<ImageModel> {
+    override suspend fun getImages(page: Int): List<ResponseModel> {
                 return userService.getMovies(page,"1d094e25","fast","movie").Search
     }
 }

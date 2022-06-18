@@ -38,6 +38,6 @@ For parallel downloading of images we can use async/await coroutine which will b
 
 approach
 We have images to load , which are the main cause of memory consumption, we need to optimize bitmap of images.
-1. clear recycler view holder on <i>onViewRecycled()</i>. This helps in deep activity stack where activities are not destroyed after navigation glide will hold objects.
+1. clear recycler view holder on <i>onViewRecycled()</i> when view is not visible. This also helps in deep activity stack where activities are not destroyed after navigation glide will hold objects.
 2. use **RGB_565**  instead of **ARGB_8888** in glide to load images(has visual impact).
 3. fix height of viewholder if view holder has fixed size. we used ``` binding.rvImages.setHasFixedSize(true)```, since we had view holder with fix height.

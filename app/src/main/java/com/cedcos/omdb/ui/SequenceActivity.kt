@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cedcos.omdb.R
-import com.cedcos.omdb.data.model.ImageModel
+import com.cedcos.omdb.data.model.ResponseModel
 import com.cedcos.omdb.databinding.ActivityMovieBinding
 import com.cedcos.omdb.util.Status
 import com.cedcos.omdb.viewModels.SequenceViewModel
@@ -93,7 +93,7 @@ class SequenceActivity : AppCompatActivity() {
         }
     }
 
-    private fun renderList(users: List<ImageModel>) {
+    private fun renderList(users: List<ResponseModel>) {
         imageAdapter.addData(users)
         imageAdapter.notifyDataSetChanged()
     }
